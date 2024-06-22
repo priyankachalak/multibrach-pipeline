@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label "slave-2"
+    }
 
     stages {
         stage ('Compile Stage') {
@@ -33,7 +35,7 @@ pipeline {
 
             steps {
                 
-                    echo "This is master branch"
+                    echo "This is qa branch"
                 }
             
         }
